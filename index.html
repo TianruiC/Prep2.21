@@ -16,8 +16,9 @@
   </body>
   <div id="explain" style="display:none">
     <p>The Mean is the sum of the numbers divided by the amount of the numbers we have.</p>
-    <p>We can use the Reduce method to let the computer calculate the sum of the numbers for us. The reduce() method executes a function which you provide on each member of the array resulting in single output value. </p>
-    <p>For instance, in order to calculate the Mean of the numbers in the array, we need to calculate the sum first.</p>
+    <p>We can use the Reduce method to let the computer calculate the sum of the numbers for us. </p>
+    <p>The reduce() method executes a <i><b>function</i></b> which you provide on <i><b>each member of the array</i></b> resulting in single output value. </p>
+    <p>In order to calculate the Mean of the numbers in the array, we need to calculate the sum first.</p>
     <p>We need to create an function to add a particular number to the total variable</p>
     <p>The example code for getSum() function will be
       <br/>
@@ -26,7 +27,7 @@
       <br/>  return total + num;
       <br/>}
       </p>
-    <p>Then we need to use the getSum() and apply it to the reduce() method for array to let it run for each member in the array to calculate the sum. </P>
+    <p>Then we need to use the getSum() and apply it to the reduce() method for array to let it run for <i><b>each member in the array</i></b> to calculate the sum. </P>
     <p>The sum can be calculated by the code : Num.reduce(getSum). And the Num represents the number array, it can be replaced by any array name you given.</p>
     <p>After finding the sum of the numbers in the array we need to divided it by the amount of the numbers in the array, which can be calculated by the code: Num.length</p>
     <p>So the Mean will can be calculated by code:  Num.reduce(getSum)/Num.length;</p>
