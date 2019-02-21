@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>11, 4, 41, 50, 7, 19, 8, 18, 2, 6, 43, 6, 20, 43, 2, 23, 12, 24, 31, 29</p>
+    <p>Click the buttons below to get the Mean, Mode, and Median of the numbers above.</p>
+    <button id="btn" onclick="mean()">Mean</button>
+    <button id="btn2" onclick="mode()">Mode</button>
+    <button id="btn3" onclick="median()">Median</button>
+    <p>Click the Explain button to know how to use the reduce method to find the mean.</p>
+    <button id="btn4" onclick="explain()">Explain</button>
+  </body>
+  <div id="explain" style="display:none">
+    <p>We can use the Reduce method to let the computer calculate the sum of the numbers for us. The reduce() method executes a function which you provide on each member of the array resulting in single output value. </p>
+    <p>For instance, in order to calculate the sum of the numbers in the array, we need to create an function to add the each number to the sum variable. </p>
+    <p></p>
+</div>
+  <script>
+  var Num=[11,4,41,50,7,19,8,18,2,6,43,6,20,43,2,23,12,24,31,29];
+  function getSum(total, num)
+  {
+    return total + num;
+  }
+ function mean()
+  {
+      mean = Num.reduce(getSum)/Num.length;
+      var para = document.createElement("P");
+      var text = document.createTextNode("The Mean is "+mean);
+      para.appendChild(text);
+      document.body.appendChild(para);
+      document.getElementById("btn").disabled = true;
+  }
+    function mode()
+    {
+      var para = document.createElement("P");
+      var text = document.createTextNode("The Mode is 2, 6, 43");
+      para.appendChild(text);
+      document.body.appendChild(para);
+      document.getElementById("btn2").disabled = true;
+    }
+    function median()
+    {
+      var para = document.createElement("P");
+      var text = document.createTextNode("The Median is 18.5");
+      para.appendChild(text);
+      document.body.appendChild(para);
+      document.getElementById("btn3").disabled = true;
+    }
+    function explain()
+    {
+      document.getElementById("explain").style.display="block";
+      document.getElementById("btn4").disabled = true;
+    }
+  </script>
+</html>
